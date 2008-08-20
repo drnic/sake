@@ -8,8 +8,8 @@ No longer.  Sake is a tool which helps you maintain a set of system level Rake t
 
 Get started:
 
-$ sudo gem install sake
-$ sake -h
+  $ sudo gem install sake
+  $ sake -h
 
 Show all Sake tasks (but no local Rake tasks), optionally only those matching a pattern.
   $ sake -T
