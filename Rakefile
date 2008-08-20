@@ -11,7 +11,8 @@ Hoe.new('sake', Sake::Version::String) do |p|
   p.url          = "http://errtheblog.com/"
   p.author       = 'Chris Wanstrath'
   p.email        = "chris@ozmm.org"
-  p.extra_deps   = ['ParseTree >=2.1.1', 'ruby2ruby >=1.1.8']
+  p.extra_deps   = [['ParseTree', '>=2.1.1'],
+                    ['ruby2ruby', '>=1.1.8']]
 end
 
 desc 'Generate RDoc documentation for Sake.'
