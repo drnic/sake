@@ -340,6 +340,7 @@ class Sake
     # safelevel before parsing the Rakefile in question.
     def self.parse(file)
       body = (file == "-" ? $stdin : open(file)).read
+      return new if ENV['SAKE_UNSAFE']
 
       instance = new
       Thread.new { instance.instance_eval "$SAFE = 3\n#{body}" }.join
