@@ -574,16 +574,16 @@ module Rake # :nodoc: all
     alias_method :sake_original_have_rakefile, :have_rakefile
     def have_rakefile(*args)
       @rakefile ||= ''
-      sake_original_have_rakefile(*args) || true
+      sake_original_have_rakefile(*args) || ''
     end
   
     ##
     # Accept only one task, unlike Rake, to make passing arguments cleaner.
-    alias_method :sake_original_collect_tasks, :collect_tasks
-    def collect_tasks
-      sake_original_collect_tasks
-      @top_level_tasks = [@top_level_tasks.first]
-    end
+    #alias_method :sake_original_collect_tasks, :collect_tasks
+    #def collect_tasks
+    #  sake_original_collect_tasks
+    #  @top_level_tasks = [@top_level_tasks.first]
+    #end
   end
 end
 
